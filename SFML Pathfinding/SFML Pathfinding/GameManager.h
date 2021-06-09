@@ -16,6 +16,9 @@ public:
 	//draws all of the currently visable objects in 
 	void Draw(sf::RenderWindow* Window);
 
+	//updates all of the actors
+	void Update();
+
 	void ClearScene();
 
 private:

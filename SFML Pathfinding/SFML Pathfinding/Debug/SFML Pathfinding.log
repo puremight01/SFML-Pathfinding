@@ -1,2 +1,7 @@
-﻿  GameManager.cpp
-  SFML Pathfinding.vcxproj -> D:\Users\mds000022s\Desktop\SFML Pathfinding\SFML Pathfinding\Debug\SFML Pathfinding.exe
+﻿  Behaviour.cpp
+  Character.cpp
+  GameManager.cpp
+  Seek.cpp
+  Source.cpp
+  Generating Code...
+  SFML Pathfinding.vcxproj -> D:\Users\mds000022s\Documents\GitHub\SFML-Pathfinding\SFML Pathfinding\Debug\SFML Pathfinding.exe
