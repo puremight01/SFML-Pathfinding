@@ -1,12 +1,12 @@
 #include "Character.h"
 
-Character::Character()
+Character::Character(Behaviour* behaviour)
 {
 	//white empty texture
 	sf::Texture tex = sf::Texture();
 
 	//pixles in the texture
-	tex.create(100, 100);
+	tex.create(50, 50);
 
 	Drawable = new sf::Sprite();
 
@@ -26,10 +26,14 @@ Character::Character()
 	Drawable->setPosition(sf::Vector2f(400.0f, 300.0f));
 
 	//set behaviour
-	this->MyBehaviour = new Seek(Drawable);
+	this->MyBehaviour = behaviour;
+
+	//set self on behaviours
+	this->MyBehaviour->SetSelf(Drawable);
 }
 
-void Character::Update()
+void Character::Update(float dt)
 {
-	MyBehaviour->Update();
+	//updates the sprite based on the behaviour 
+	MyBehaviour->Update(dt);
 }

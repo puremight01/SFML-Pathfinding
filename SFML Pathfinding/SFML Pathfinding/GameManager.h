@@ -8,22 +8,25 @@ class GameManager
 {
 public:
 	//creates the gamemanager (look into making a singleton)
-	GameManager();
+	GameManager(sf::RenderWindow* window);
 
 	//loads a level (need to figure out how these can be saved and chosen
 	void Load();
 
 	//draws all of the currently visable objects in 
-	void Draw(sf::RenderWindow* Window);
+	void Draw();
 
 	//updates all of the actors
 	void Update();
 
 	void ClearScene();
 
-private:
+	sf::RenderWindow* Window;
 
+private:
+	sf::Clock deltaClock;
 	std::vector<Character> AllChars;
+	
 	//process input
 	//load Scene
 	//hold character list (interaction)

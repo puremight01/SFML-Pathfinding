@@ -5,6 +5,8 @@
 //header includes
 #include"Behaviour.h"
 #include"Seek.h"
+#include"Flee.h"
+#include"MouseAttach.h"
 
 class Character
 {
@@ -15,10 +17,10 @@ public:
 	//creates our objects
 	
 	//default constructor
-	Character();
+	Character(Behaviour* behaviour);
 
 	// updates this object based on MyBehaviour
-	void Update();
+	void Update(float dt);
 
 	//holds the renderable part of the object
 	sf::Sprite* Drawable;

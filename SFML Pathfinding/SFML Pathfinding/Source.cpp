@@ -9,7 +9,7 @@ int main()
 	//creates our window 
 	sf::RenderWindow window(sf::VideoMode(800, 600, 32), "Jacob Sullvan AI Behaviours");
 
-	GameManager Game = GameManager();
+	GameManager Game = GameManager(&window);
 
 	// run the program as long as the window is open
 	while (window.isOpen())
@@ -30,7 +30,7 @@ int main()
 		Game.Update();
 
 		//draws the objects
-		Game.Draw(&window);
+		Game.Draw();
 
 		//Displays the double buffered frame
 		window.display();

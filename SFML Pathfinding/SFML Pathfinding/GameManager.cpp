@@ -1,9 +1,15 @@
 #include "GameManager.h"
 
-GameManager::GameManager()
+GameManager::GameManager(sf::RenderWindow* window)
 {
-	AllChars.push_back(Character());
-	AllChars.push_back(Character());
+	Window = window;
+	AllChars.push_back(Character(new Seek()));
+	AllChars.push_back(Character(new MouseAttach(Window)));
+	AllChars.push_back(Character(new Flee()));
+
+	AllChars[0].MyBehaviour->SetTarget(AllChars[1].Drawable);
+	AllChars[2].MyBehaviour->SetTarget(AllChars[1].Drawable);
+	AllChars[0].Drawable->setPosition(500, 500);
 	
 }
 
@@ -11,7 +17,7 @@ void GameManager::Load()
 {
 }
 
-void GameManager::Draw(sf::RenderWindow* Window)
+void GameManager::Draw()
 {
 	for (auto index = AllChars.begin(); index != AllChars.end(); index++)
 	{
@@ -21,9 +27,11 @@ void GameManager::Draw(sf::RenderWindow* Window)
 
 void GameManager::Update()
 {
+	
+	sf::Time dt = deltaClock.restart();
 	for (auto index = AllChars.begin(); index != AllChars.end(); index++)
 	{
-		index->Update();
+		index->Update(dt.asSeconds());
 	}
 }
 
