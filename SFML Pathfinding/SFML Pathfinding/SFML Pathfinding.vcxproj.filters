@@ -19,6 +19,12 @@
     <Filter Include="Header Files\Behaviours">
       <UniqueIdentifier>{83d4f2a1-d38f-443f-a747-4fc50b0f3cbf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Behaviours\Steering">
+      <UniqueIdentifier>{655bc495-9707-460c-988c-640c0f4012ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Behaviours\Steering">
+      <UniqueIdentifier>{f1ab0740-fd9e-41f6-826c-71d9a43084c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -30,25 +36,25 @@
     <ClCompile Include="GameManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Seek.cpp">
-      <Filter>Source Files\Behaviours</Filter>
-    </ClCompile>
     <ClCompile Include="Behaviour.cpp">
       <Filter>Source Files\Behaviours</Filter>
     </ClCompile>
     <ClCompile Include="MouseAttach.cpp">
       <Filter>Source Files\Behaviours</Filter>
     </ClCompile>
+    <ClCompile Include="Arrive.cpp">
+      <Filter>Source Files\Behaviours\Steering</Filter>
+    </ClCompile>
     <ClCompile Include="Flee.cpp">
-      <Filter>Source Files\Behaviours</Filter>
+      <Filter>Source Files\Behaviours\Steering</Filter>
+    </ClCompile>
+    <ClCompile Include="Seek.cpp">
+      <Filter>Source Files\Behaviours\Steering</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Seek.h">
-      <Filter>Header Files\Behaviours</Filter>
     </ClInclude>
     <ClInclude Include="Behaviour.h">
       <Filter>Header Files\Behaviours</Filter>
@@ -59,8 +65,14 @@
     <ClInclude Include="Character.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Arrive.h">
+      <Filter>Header Files\Behaviours\Steering</Filter>
+    </ClInclude>
     <ClInclude Include="Flee.h">
-      <Filter>Header Files\Behaviours</Filter>
+      <Filter>Header Files\Behaviours\Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="Seek.h">
+      <Filter>Header Files\Behaviours\Steering</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

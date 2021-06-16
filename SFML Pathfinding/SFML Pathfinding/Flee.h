@@ -7,7 +7,6 @@ class Flee :
 public:
 	//constructor for this Behaviour
 	Flee();
-	Flee(sf::Sprite* OurSprite);
 
 	//moves the sprite 
 	void Update(float dt);
@@ -15,8 +14,12 @@ public:
 private:
 	//calculates the velocity vector 
 	void Direction();
-	int speed = 300;
+	
+	//how fast the character can move
+	int speed = 280;
 
+	//how quickly the character can change direction (closer to 1 = lower mass and greater acceleration)
+	float AccelConst = 0.0025f;
 
 };
 

@@ -24,6 +24,8 @@ protected:
 	//finds the shortest path to targed taking into acount the border rule
 	sf::Vector2f shortest();
 
+	sf::Vector2f Normalize(sf::Vector2f input);
+
 	//variables used in all Behaviour
 	sf::Vector2f Velocity;
 	sf::Sprite* Self;

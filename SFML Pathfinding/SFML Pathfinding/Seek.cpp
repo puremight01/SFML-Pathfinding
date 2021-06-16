@@ -5,20 +5,18 @@ Seek::Seek()
 	Velocity = sf::Vector2f(0.0f, 0.0f);
 }
 
-Seek::Seek(sf::Sprite* OurSprite)
-{
-	Behaviour::SetSelf(OurSprite);
-	Velocity = sf::Vector2f(0.0f, 0.0f);
-}
 
 void Seek::Update(float dt)
 {
+	//update velocity
 	Direction();
+
+	//move if i exist and then apply boarder rule
 	if (Self != nullptr && Other != nullptr)
 	{
 		Self->setPosition(Self->getPosition() + (Velocity * dt *(float)speed));
+		BorderRule();
 	}
-	BorderRule();
 }
 
 void Seek::Direction()
@@ -26,24 +24,14 @@ void Seek::Direction()
 	if (Other != nullptr)
 	{
 
-		//calculate the vector from self to other 
-		sf::Vector2f direction = shortest();
+		//calculate the vector from self to other and normalize it 
+		sf::Vector2f DesiredDirection = Behaviour::Normalize( shortest());
+		
+		//calculate the normalized velocity 
+		Velocity = Behaviour::Normalize(Velocity);
 
-
-		//calculate the distance between the 2 sprites
-		float len = sqrt(direction.x * direction.x + direction.y * direction.y);
-
-		//normalise the direction 
-		if (len != 0)
-		{
-			Velocity.x = direction.x / len;
-			Velocity.y = direction.y / len;
-		}
-		//set velocity to 0
-		else
-		{
-			Velocity.x = 0;
-			Velocity.y = 0;
-		}
+		// calculate and apply the steering force
+		sf::Vector2f SteeringForce = DesiredDirection - Velocity;
+		Velocity += SteeringForce * AccelConst;
 	}
 }

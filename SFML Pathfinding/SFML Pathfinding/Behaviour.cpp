@@ -21,6 +21,7 @@ void Behaviour::BorderRule()
 	{
 		Self->setPosition(Self->getPosition().x, ScreenY + (Self->getLocalBounds().height / 2));
 	}
+
 	//if right of screen go to left
 	if (Self->getPosition().x - (Self->getLocalBounds().width / 2) > ScreenX)
 	{
@@ -52,23 +53,46 @@ sf::Vector2f Behaviour::shortest()
 			direction.x = (ScreenX - Self->getPosition().x) + Other->getPosition().x + Self->getLocalBounds().width;
 		}
 	}
-		//this activates if it is shorter to go around the screen rather than through it 
-		if (direction.y > ((ScreenY / 2) + Self->getLocalBounds().height )|| direction.y < (-(ScreenY / 2) - Self->getLocalBounds().height))
+	//this activates if it is shorter to go around the screen rather than through it 
+	if (direction.y > ((ScreenY / 2) + Self->getLocalBounds().height )|| direction.y < (-(ScreenY / 2) - Self->getLocalBounds().height))
+	{
+		//shorter to go off the top of screen 
+		if (direction.y > (ScreenY / 2) + Self->getLocalBounds().height)
 		{
-			//shorter to go off the top of screen 
-			if (direction.y > (ScreenY / 2) + Self->getLocalBounds().height)
-			{
-				direction.y = -Self->getPosition().y + (Other->getPosition().y - ScreenY) - Self->getLocalBounds().height;
-			}
-			//shorter to go off the bot of screen 
-			else
-			{
-				direction.y = (ScreenY - Self->getPosition().y) + Other->getPosition().y + Self->getLocalBounds().height;
-			}
+			direction.y = -Self->getPosition().y + (Other->getPosition().y - ScreenY) - Self->getLocalBounds().height;
 		}
+		//shorter to go off the bot of screen 
+		else
+		{
+			direction.y = (ScreenY - Self->getPosition().y) + Other->getPosition().y + Self->getLocalBounds().height;
+		}
+	}
 	
 	return direction;
+}
+
+sf::Vector2f Behaviour::Normalize(sf::Vector2f input)
+{//calculate the vector from self to other 
+	sf::Vector2f normalized = input;
+
+	//calculate the distance between the 2 sprites
+	float len = sqrt(normalized.x * normalized.x + normalized.y * normalized.y);
+
+	//normalise the direction 
+	if (len != 0)
+	{
+		normalized.x = normalized.x / len;
+		normalized.y = normalized.y / len;
+	}
+	//set velocity to 0
+	else
+	{
+		normalized.x = 0;
+		normalized.y = 0;
+	}
 	
+	//return the vector 
+	return normalized;
 }
 
 

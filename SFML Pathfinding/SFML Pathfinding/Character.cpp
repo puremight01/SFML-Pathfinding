@@ -8,6 +8,7 @@ Character::Character(Behaviour* behaviour)
 	//pixles in the texture
 	tex.create(50, 50);
 
+	//create a new sprite
 	Drawable = new sf::Sprite();
 
 	//set the sprite info with the texture

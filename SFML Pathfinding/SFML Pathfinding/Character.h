@@ -7,6 +7,7 @@
 #include"Seek.h"
 #include"Flee.h"
 #include"MouseAttach.h"
+#include"Arrive.h"
 
 class Character
 {
