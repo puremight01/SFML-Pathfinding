@@ -138,8 +138,10 @@
     <ClCompile Include="Flee.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="MouseAttach.cpp" />
+    <ClCompile Include="Pursuit.cpp" />
     <ClCompile Include="Seek.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Wander.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arrive.h" />
@@ -148,7 +150,9 @@
     <ClInclude Include="Flee.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="MouseAttach.h" />
+    <ClInclude Include="Pursuit.h" />
     <ClInclude Include="Seek.h" />
+    <ClInclude Include="Wander.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

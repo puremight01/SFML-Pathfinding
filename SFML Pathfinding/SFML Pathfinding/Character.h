@@ -8,6 +8,8 @@
 #include"Flee.h"
 #include"MouseAttach.h"
 #include"Arrive.h"
+#include"Wander.h"
+#include"Pursuit.h"
 
 class Character
 {

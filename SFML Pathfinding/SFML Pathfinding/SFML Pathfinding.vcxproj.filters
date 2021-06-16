@@ -51,6 +51,12 @@
     <ClCompile Include="Seek.cpp">
       <Filter>Source Files\Behaviours\Steering</Filter>
     </ClCompile>
+    <ClCompile Include="Wander.cpp">
+      <Filter>Source Files\Behaviours\Steering</Filter>
+    </ClCompile>
+    <ClCompile Include="Pursuit.cpp">
+      <Filter>Source Files\Behaviours\Steering</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -72,6 +78,12 @@
       <Filter>Header Files\Behaviours\Steering</Filter>
     </ClInclude>
     <ClInclude Include="Seek.h">
+      <Filter>Header Files\Behaviours\Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="Wander.h">
+      <Filter>Header Files\Behaviours\Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="Pursuit.h">
       <Filter>Header Files\Behaviours\Steering</Filter>
     </ClInclude>
   </ItemGroup>

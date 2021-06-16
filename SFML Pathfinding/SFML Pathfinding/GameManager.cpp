@@ -3,12 +3,13 @@
 GameManager::GameManager(sf::RenderWindow* window)
 {
 	Window = window;
-	AllChars.push_back(Character(new Arrive()));
+	AllChars.push_back(Character(new Pursuit()));
 	AllChars.push_back(Character(new MouseAttach(Window)));
-	//AllChars.push_back(Character(new Flee()));
-
-	AllChars[0].MyBehaviour->SetTarget(AllChars[1].Drawable);
-	//AllChars[2].MyBehaviour->SetTarget(AllChars[1].Drawable);
+	AllChars.push_back(Character(new Flee()));
+	AllChars[0].MyBehaviour->SetTarget(AllChars[2].Drawable);
+	AllChars[2].MyBehaviour->SetTarget(AllChars[1].Drawable);
+	static_cast<Pursuit*>(AllChars[0].MyBehaviour)->setTarVel(AllChars[2].MyBehaviour->getVel());
+	static_cast<Pursuit*>(AllChars[0].MyBehaviour)->setTarSpeed(&static_cast<Flee*>(AllChars[2].MyBehaviour)->speed);
 	AllChars[0].Drawable->setPosition(500, 500);
 	
 }

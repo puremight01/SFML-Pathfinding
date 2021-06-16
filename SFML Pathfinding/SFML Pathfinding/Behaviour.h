@@ -17,6 +17,9 @@ public:
 	//sets the target for the behavior
 	void SetSelf(sf::Sprite* SelfSprite) { Self = SelfSprite; }
 
+	//get the velocity pointer ( not safe but used in pursuit
+	sf::Vector2f* getVel() { return &Velocity; };
+
 protected:
 	//keeps the sprite on the screen
 	void BorderRule();
