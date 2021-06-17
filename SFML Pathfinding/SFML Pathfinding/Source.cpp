@@ -7,7 +7,7 @@
 int main()
 {
 	//creates our window 
-	sf::RenderWindow window(sf::VideoMode(800, 600, 32), "Jacob Sullvan AI Behaviours");
+	sf::RenderWindow window(sf::VideoMode(1280, 720, 32), "Jacob Sullvan AI Behaviours");
 
 	GameManager Game = GameManager(&window);
 

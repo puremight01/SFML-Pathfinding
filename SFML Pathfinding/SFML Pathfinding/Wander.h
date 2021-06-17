@@ -14,13 +14,13 @@ public:
 
 private:
     //moving variables
-    int speed = 100;
+    int speed = 250;
     int spindir;
     float timer;
 
     //circle variables
-    float Radius = .05f;
+    float Radius = .5f;
     float point;
-    float jitter = 0.0001f;
+    float jitter = 0.001f;
 };
 

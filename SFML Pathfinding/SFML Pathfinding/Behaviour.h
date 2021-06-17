@@ -35,7 +35,7 @@ protected:
 	sf::Sprite* Other;
 
 	//variables used for border rules
-	int ScreenY = 600;
-	int ScreenX = 800;
+	int ScreenY = 720;
+	int ScreenX =  1280;
 };
 

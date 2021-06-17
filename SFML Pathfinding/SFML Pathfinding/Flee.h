@@ -12,7 +12,7 @@ public:
 	void Update(float dt);
 
 	//how fast the character can move
-	int speed = 280;
+	int speed = 250;
 
 private:
 	//calculates the velocity vector 

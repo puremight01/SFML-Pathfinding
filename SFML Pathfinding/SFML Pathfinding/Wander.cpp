@@ -10,12 +10,12 @@ void Wander::Update(float dt)
 	timer += dt;
 	if (timer > 1)
 	{
-		spindir = rand() / 2;
+		spindir = rand() % 2;
 		if (spindir == 0)
 		{
 			spindir = -1;
 		}
-		point = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / 7));
+		
 
 		timer = 0;
 	}
@@ -27,8 +27,8 @@ void Wander::Update(float dt)
 	
 	Dir = Behaviour::Normalize(Dir);
 	
-	Velocity = Dir;
-
+	Velocity += Dir * 0.01f;
+	Velocity = Behaviour::Normalize(Velocity);
 	//move if i exist and then apply boarder rule
 	if (Self != nullptr )
 	{
