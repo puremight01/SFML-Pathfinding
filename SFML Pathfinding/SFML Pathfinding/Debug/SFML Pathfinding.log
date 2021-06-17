@@ -1,6 +1,26 @@
-﻿  Character.cpp
+﻿  Button.cpp
+C:\Users\purem\Desktop\School Work Folder 2021\GD2PO1\SFML-Pathfinding\SFML Pathfinding\SFML Pathfinding\Button.cpp(11,116): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\purem\Desktop\School Work Folder 2021\GD2PO1\SFML-Pathfinding\SFML Pathfinding\SFML Pathfinding\Button.cpp(11,81): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+  ButtonFunction.cpp
+  Character.cpp
+  Flee.cpp
   GameManager.cpp
-  Pursuit.cpp
   Source.cpp
   Generating Code...
   SFML Pathfinding.vcxproj -> C:\Users\purem\Desktop\School Work Folder 2021\GD2PO1\SFML-Pathfinding\SFML Pathfinding\Debug\SFML Pathfinding.exe

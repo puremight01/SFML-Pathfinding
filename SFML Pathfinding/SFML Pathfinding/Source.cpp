@@ -34,8 +34,6 @@ int main()
 
 		//Displays the double buffered frame
 		window.display();
-
 	}
-
 	return 0;
 }

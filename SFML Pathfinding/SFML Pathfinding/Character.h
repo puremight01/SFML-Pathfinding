@@ -10,6 +10,7 @@
 #include"Arrive.h"
 #include"Wander.h"
 #include"Pursuit.h"
+#include"Button.h"
 
 class Character
 {

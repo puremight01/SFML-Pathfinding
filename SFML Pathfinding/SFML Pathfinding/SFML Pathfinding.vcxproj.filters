@@ -25,6 +25,12 @@
     <Filter Include="Header Files\Behaviours\Steering">
       <UniqueIdentifier>{f1ab0740-fd9e-41f6-826c-71d9a43084c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Behaviours\Button">
+      <UniqueIdentifier>{bf8cc860-4e8e-450e-9c87-e5a4d56f6c97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Behaviours\Button">
+      <UniqueIdentifier>{f65bc163-3af3-41b4-8b82-8787ba395ec0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -57,6 +63,12 @@
     <ClCompile Include="Pursuit.cpp">
       <Filter>Source Files\Behaviours\Steering</Filter>
     </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files\Behaviours\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonFunction.cpp">
+      <Filter>Source Files\Behaviours\Button</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -85,6 +97,12 @@
     </ClInclude>
     <ClInclude Include="Pursuit.h">
       <Filter>Header Files\Behaviours\Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files\Behaviours\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonFunction.h">
+      <Filter>Header Files\Behaviours\Button</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

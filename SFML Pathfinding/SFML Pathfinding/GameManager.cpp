@@ -6,6 +6,7 @@ GameManager::GameManager(sf::RenderWindow* window)
 	AllChars.push_back(Character(new Pursuit()));
 	AllChars.push_back(Character(new MouseAttach(Window)));
 	AllChars.push_back(Character(new Wander()));
+	AllChars.push_back(Character(new Button(Window)));
 	AllChars[0].MyBehaviour->SetTarget(AllChars[2].Drawable);
 	//AllChars[2].MyBehaviour->SetTarget(AllChars[1].Drawable);
 	static_cast<Pursuit*>(AllChars[0].MyBehaviour)->setTarVel(AllChars[2].MyBehaviour->getVel());

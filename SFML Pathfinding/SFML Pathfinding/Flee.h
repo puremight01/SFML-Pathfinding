@@ -20,6 +20,5 @@ private:
 	
 	//how quickly the character can change direction (closer to 1 = lower mass and greater acceleration)
 	float AccelConst = 0.0025f;
-
 };
 
