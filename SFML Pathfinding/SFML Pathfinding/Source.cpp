@@ -2,14 +2,16 @@
 #include <SFML/Graphics.hpp>
 
 //class includes
-#include"GameManager.h"
+#include"Externs.h"
+
+GameManager* Game = nullptr;
 
 int main()
 {
 	//creates our window 
 	sf::RenderWindow window(sf::VideoMode(1280, 720, 32), "Jacob Sullvan AI Behaviours");
 
-	GameManager Game = GameManager(&window);
+	Game = new GameManager(&window);
 
 	// run the program as long as the window is open
 	while (window.isOpen())
@@ -27,10 +29,10 @@ int main()
 		window.clear();
 
 		//updates the objects
-		Game.Update();
+		Game->Update();
 
 		//draws the objects
-		Game.Draw();
+		Game->Draw();
 
 		//Displays the double buffered frame
 		window.display();

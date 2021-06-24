@@ -1,7 +1,8 @@
 #include "Button.h"
 
-Button::Button(sf::RenderWindow* window)
+Button::Button(sf::RenderWindow* window, ButtonFunction* Function)
 {
+	this->Function = Function;
 	Window = window;
 }
 

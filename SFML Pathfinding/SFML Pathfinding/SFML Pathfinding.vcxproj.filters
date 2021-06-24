@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Behaviours\Button">
       <UniqueIdentifier>{f65bc163-3af3-41b4-8b82-8787ba395ec0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Behaviours\Button\Functions">
+      <UniqueIdentifier>{9d8d9f30-4e56-48d1-a210-71fc0792790e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Behaviours\Button\Functions">
+      <UniqueIdentifier>{72656b55-510a-43e5-a252-f27b9a8e2005}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -67,7 +73,13 @@
       <Filter>Source Files\Behaviours\Button</Filter>
     </ClCompile>
     <ClCompile Include="ButtonFunction.cpp">
-      <Filter>Source Files\Behaviours\Button</Filter>
+      <Filter>Source Files\Behaviours\Button\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Loader.cpp">
+      <Filter>Source Files\Behaviours\Button\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelFactory.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -102,7 +114,16 @@
       <Filter>Header Files\Behaviours\Button</Filter>
     </ClInclude>
     <ClInclude Include="ButtonFunction.h">
-      <Filter>Header Files\Behaviours\Button</Filter>
+      <Filter>Header Files\Behaviours\Button\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="Loader.h">
+      <Filter>Header Files\Behaviours\Button\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="Externs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelFactory.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
