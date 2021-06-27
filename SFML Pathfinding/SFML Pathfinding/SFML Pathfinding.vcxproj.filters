@@ -81,6 +81,9 @@
     <ClCompile Include="LevelFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Flock.cpp">
+      <Filter>Source Files\Behaviours\Steering</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -91,9 +94,6 @@
     </ClInclude>
     <ClInclude Include="MouseAttach.h">
       <Filter>Header Files\Behaviours</Filter>
-    </ClInclude>
-    <ClInclude Include="Character.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Arrive.h">
       <Filter>Header Files\Behaviours\Steering</Filter>
@@ -123,6 +123,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LevelFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Flock.h">
+      <Filter>Header Files\Behaviours\Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

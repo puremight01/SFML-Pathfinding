@@ -11,6 +11,7 @@
 #include"Wander.h"
 #include"Pursuit.h"
 #include"Button.h"
+#include"Flock.h"
 
 
 class Character

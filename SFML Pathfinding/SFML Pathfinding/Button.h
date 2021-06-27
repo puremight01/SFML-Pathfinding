@@ -15,5 +15,6 @@ public:
 private:
     sf::RenderWindow* Window;
     ButtonFunction* Function;
+    sf::Text ButtonText;
 };
 

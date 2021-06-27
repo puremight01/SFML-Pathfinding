@@ -1,27 +1,3 @@
-﻿  Button.cpp
-C:\Users\purem\Desktop\School Work Folder 2021\GD2PO1\SFML-Pathfinding\SFML Pathfinding\SFML Pathfinding\Button.cpp(12,116): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=int
-          ]
-          and
-          [
-              T=float
-          ]
-C:\Users\purem\Desktop\School Work Folder 2021\GD2PO1\SFML-Pathfinding\SFML Pathfinding\SFML Pathfinding\Button.cpp(12,81): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=int
-          ]
-          and
-          [
-              T=float
-          ]
-  Character.cpp
-  GameManager.cpp
-  LevelFactory.cpp
-  Loader.cpp
-  Source.cpp
-  Generating Code...
-C:\Users\purem\Desktop\School Work Folder 2021\GD2PO1\SFML-Pathfinding\SFML Pathfinding\SFML Pathfinding\LevelFactory.cpp(16): warning C4715: 'LevelFactory::LevelSelector': not all control paths return a value
+﻿  Flock.cpp
+C:\Users\purem\Desktop\School Work Folder 2021\GD2PO1\SFML-Pathfinding\SFML Pathfinding\SFML Pathfinding\Flock.cpp(163): warning C4715: 'Flock::cohesion': not all control paths return a value
   SFML Pathfinding.vcxproj -> C:\Users\purem\Desktop\School Work Folder 2021\GD2PO1\SFML-Pathfinding\SFML Pathfinding\Debug\SFML Pathfinding.exe

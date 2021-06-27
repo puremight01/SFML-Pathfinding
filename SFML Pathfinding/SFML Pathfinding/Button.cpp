@@ -3,6 +3,7 @@
 Button::Button(sf::RenderWindow* window, ButtonFunction* Function)
 {
 	this->Function = Function;
+	//ButtonText.setString( this->Function->Text);
 	Window = window;
 }
 

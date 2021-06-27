@@ -8,15 +8,27 @@ GameManager::GameManager(sf::RenderWindow* window)
 {
 	
 	Window = window;
-	AllChars.push_back(Character(new Pursuit()));
+	/*AllChars.push_back(Character(new Pursuit()));
 	AllChars.push_back(Character(new MouseAttach(Window)));
 	AllChars.push_back(Character(new Wander()));
-	AllChars.push_back(Character(new Button(Window, new Loader(1))));
-	AllChars[0].MyBehaviour->SetTarget(AllChars[2].Drawable);
-	//AllChars[2].MyBehaviour->SetTarget(AllChars[1].Drawable);
-	static_cast<Pursuit*>(AllChars[0].MyBehaviour)->setTarVel(AllChars[2].MyBehaviour->getVel());
-	static_cast<Pursuit*>(AllChars[0].MyBehaviour)->setTarSpeed(&static_cast<Flee*>(AllChars[2].MyBehaviour)->speed);
-	AllChars[0].Drawable->setPosition(500, 500);
+	AllChars.push_back(Character(new Button(Window, new Loader(1))));*/
+	std::vector<Flock*>* TheFlock = new std::vector<Flock*>;
+	for(int i = 0; i < 50; i++)
+	{ 
+		AllChars.push_back(Character(new Flock(TheFlock)));
+		
+	}
+	//AllChars[0].MyBehaviour->SetTarget(AllChars[2].Drawable);
+	////AllChars[2].MyBehaviour->SetTarget(AllChars[1].Drawable);
+	//static_cast<Pursuit*>(AllChars[0].MyBehaviour)->setTarVel(AllChars[2].MyBehaviour->getVel());
+	//static_cast<Pursuit*>(AllChars[0].MyBehaviour)->setTarSpeed(&static_cast<Flee*>(AllChars[2].MyBehaviour)->speed);
+	//AllChars[0].Drawable->setPosition(500, 500);
+	for (int i = 0; i < AllChars.size(); i++)
+	{
+		AllChars[i].Drawable->setPosition(sf::Vector2f(float(rand()% 1280),float(rand()% 720)));
+	}
+	
+
 }
 
 void GameManager::load()

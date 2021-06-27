@@ -8,6 +8,7 @@ GameManager* Game = nullptr;
 
 int main()
 {
+	srand(time(NULL));
 	//creates our window 
 	sf::RenderWindow window(sf::VideoMode(1280, 720, 32), "Jacob Sullvan AI Behaviours");
 
@@ -36,6 +37,13 @@ int main()
 
 		//Displays the double buffered frame
 		window.display();
+
+		std::cout << "S" << S << std::endl;
+		std::cout << "s" << s << std::endl;
+		std::cout << "A" << A << std::endl;
+		std::cout << "a" << a << std::endl;
+		std::cout << "C" << C << std::endl;
+		std::cout << "c" << c << std::endl << std::endl;
 	}
 	return 0;
 }

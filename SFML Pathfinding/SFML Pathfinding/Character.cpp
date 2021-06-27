@@ -6,7 +6,7 @@ Character::Character(Behaviour* behaviour)
 	sf::Texture tex = sf::Texture();
 
 	//pixles in the texture
-	tex.create(50, 50);
+	tex.create(25, 25);
 
 	//create a new sprite
 	Drawable = new sf::Sprite();
